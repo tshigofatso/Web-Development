@@ -5,10 +5,13 @@
 @endsection
 
 @section('content')
-
+<div class="container">
 <div class="row">
-    <div class="col-md-6 col-md-offset-1">
-        <form action="{{route('signin')}}" method="post">
+    <div class="col-md-6">
+        <br />
+        <br />
+        <header><h3>Welcome to Currency Conversion</h3></header>
+        <form action="{{route('signin')}}" method="post" class="form-color">
             
             <div class="form-group {{$errors->has('email') ? 'has-error': ''}}">
                 <label for="first_name">First Name</label>
@@ -34,4 +37,5 @@
         </form>
     </div>
 </div>
+    </div>
 @endsection

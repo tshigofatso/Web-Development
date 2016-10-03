@@ -31,10 +31,19 @@ Route::get('/conversion', [
     'as' => 'conversion'
 ]);
 
+Route::post('/logout', [
+    'uses' => 'PersonController@logout',
+    'as' => 'logout'
+]);
 
 Route::post('/man_convert', [
     'uses' => 'CurrencyController@postCreateCurrency',
     'as' => 'man_convert'
+]);
+
+Route::post('/cal_currency', [
+    'uses' => 'CurrencyController@postConvert',
+    'as' => 'cal_currency'
 ]);
 
 Route::post('/reset_all', [

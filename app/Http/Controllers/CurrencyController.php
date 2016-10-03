@@ -10,6 +10,22 @@ class CurrencyController extends Controller
     public function getConversion_Cur(){
         return view('convert');
     }
+    
+    public function postConvert(Request $request){
+        $this->validate($request,[
+            'to_cur' => 'required',
+            'from_select' => 'required',
+            'to_select' => 'required',
+        ]);
+        
+        $to_cur = $request['to_cur'];
+        $from_select = $request['from_select'];
+        $to_select = $request['to_select'];
+        
+        
+        
+    }
+    
     public function getConversion(){
         $currencies = Currency::all();
         return view('conversion', ['currencies' => $currencies]);

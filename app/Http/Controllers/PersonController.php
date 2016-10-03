@@ -8,6 +8,11 @@ use Illuminate\Http\Request;
 class PersonController extends Controller
 {
     
+    public function logout(Request $request){
+        //logout session code
+    }
+
+
     //Sign in the user 
     public function postSignIn(Request $request){
         

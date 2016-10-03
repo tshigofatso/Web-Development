@@ -15,7 +15,20 @@
       <ul class="nav navbar-nav navbar-right">
         <li><a href="{{route('conversion')}}">Currency Management</a></li>
        <li><a href="{{route('convert_cur')}}">Convert Currency</a></li>
+       <li><a href="{{route('logout')}}">Logout</a></li>
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
+
+@if(count($errors) > 0)
+<div class="row">
+    <div class="col-md-6">
+        <ul>
+            @foreach($errors->all() as $error)
+            <li>{{$error}}</li>
+            @endforeach
+        </ul>
+    </div>
+</div>
+@endif
